@@ -22,8 +22,14 @@ public class Start {
 
 		try {
 			//FP.readData("input.txt.txt");
-			FP.readData(args[0]);
-
+			//FP.readData(args[0]);
+			if (args.length==0) {
+				FP.readData("input.txt.txt");
+			}
+			else
+			{
+				FP.readData(args[0]);
+			}
 
 		} catch (Exception ex) {
 			LOGGER.log(Level.INFO, ex.getMessage());
